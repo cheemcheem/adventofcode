@@ -1,88 +1,30 @@
 {
-  "name": "adventofcode",
+  "name": "@cheemcheem/adventofcode",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "22"
+  },
+  "packageManager": "pnpm@9.14.4",
   "scripts": {
-    "build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js && cp -r src/inputs/ dist",
-    "commit": "./scripts/commit_day.sh",
-    "dev": "tsx src/index.ts",
-    "new": "./scripts/new_day.sh",
-    "postinstall": "husky install",
-    "start": "yarn run dev"
+    "commit": "pnpm --filter @cheemcheem/adventofcode-commit-helper start",
+    "lint": "lint-staged",
+    "prepare": "husky",
+    "start": "pnpm --filter @cheemcheem/adventofcode-challenge-runner start"
   },
   "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
-    "@types/node": "^20.10.0",
-    "@types/yargs": "^17.0.32",
-    "@typescript-eslint/eslint-plugin": "^5.45.0",
-    "@typescript-eslint/parser": "^5.45.0",
-    "esbuild": "^0.19.7",
-    "eslint": "^8.54.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-import": "^2.29.0",
-    "eslint-plugin-prettier": "^5.0.1",
-    "husky": "^8.0.3",
-    "lint-staged": "^15.1.0",
-    "prettier": "^3.1.0",
-    "tsx": "^10.9.1",
-    "typescript": "^5.3.2",
-    "yargs": "^17.7.2"
+    "@eslint/js": "^9.16.0",
+    "@types/node": "^22.10.1",
+    "eslint": "^9.16.0",
+    "globals": "^15.13.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "typescript-eslint": "^8.17.0"
   },
   "lint-staged": {
     "*.{js,jsx,mjs,ts,tsx,mts}": [
       "eslint --fix"
     ]
   },
-  "eslintConfig": {
-    "overrides": [
-      {
-        "files": [
-          "*.{ts,tsx}"
-        ],
-        "parserOptions": {
-          "project": [
-            "./tsconfig.json"
-          ]
-        },
-        "extends": [
-          "plugin:@typescript-eslint/recommended",
-          "plugin:@typescript-eslint/recommended-requiring-type-checking",
-          "plugin:import/typescript"
-        ],
-        "plugins": [
-          "@typescript-eslint"
-        ],
-        "rules": {
-          "import/default": "off",
-          "@typescript-eslint/ban-ts-comment": "off"
-        }
-      },
-      {
-        "files": [
-          "**/*day*.ts"
-        ],
-        "rules": {
-          "@typescript-eslint/require-await": "off"
-        }
-      }
-    ],
-    "extends": [
-      "plugin:prettier/recommended"
-    ]
-  },
-  "prettier": {
-    "singleQuote": true,
-    "trailingComma": "all",
-    "printWidth": 120,
-    "proseWrap": "always",
-    "importOrder": [
-      "<THIRD_PARTY_MODULES>",
-      "^(\\.)/",
-      "^(\\.){2}/",
-      "^(\\.){3}/",
-      "^(\\.){4}/",
-      "^(\\.){4}/",
-      "^[./]"
-    ]
-  }
+  "license": "GPL-3.0-only"
 }

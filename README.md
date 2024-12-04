@@ -7,7 +7,7 @@ https://adventofcode.com/2021
 #### add a new day
 
 ```shell script
-$ yarn new <day> # where <day> is 1 - 25
+$ pnpm new <day> # where <day> is 1 - 25
 ```
 
 ### Example Usage
