@@ -1,34 +1,34 @@
-# adventofcode2021
+# adventofcode
 
-https://adventofcode.com/2021
+https://adventofcode.com
 
-### Example Usage
-
-##### set up
+#### set up
 
 ```shell script
 $ pnpm install
 ```
 
-##### run all days
+Now you can write code in `./challenge/days` and add inputs to `./challenge/inputs`.
+
+#### run all days
 
 ```shell script
 $ pnpm start
 ```
 
-##### run the example for a specific part of a specific day
+#### run the example for a specific part of a specific day
 
 ```shell script
 $ pnpm start -d 1 -p 2 -e
 ```
 
-##### commit and push changes for a specific day
+#### commit and push changes for a specific day
 
 ```shell script
 $ pnpm commit -d 2
 ```
 
-##### help output
+#### help output
 
 ```shell script
 $ pnpm start --help
