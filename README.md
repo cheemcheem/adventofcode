@@ -2,62 +2,51 @@
 
 https://adventofcode.com/2021
 
-### Using it for yourself
-
-#### add a new day
-
-```shell script
-$ pnpm new <day> # where <day> is 1 - 25
-```
-
 ### Example Usage
 
 ##### set up
 
 ```shell script
-$ yarn install
+$ pnpm install
 ```
 
 ##### run all days
 
 ```shell script
-$ yarn start
-```
-
-##### run the latest day
-
-```shell script
-$ yarn start -l
+$ pnpm start
 ```
 
 ##### run the example for a specific part of a specific day
 
 ```shell script
-$ yarn start -d 1 -p 2 -e
+$ pnpm start -d 1 -p 2 -e
+```
+
+##### commit and push changes for a specific day
+
+```shell script
+$ pnpm commit -d 2
 ```
 
 ##### help output
 
 ```shell script
-$ yarn start --help
+$ pnpm start --help
 
-index.ts run
-index.ts run -e
-index.ts run -d [day]
-index.ts run -d [day] -e
-index.ts run -d [day] -p [part]
-index.ts run -d [day] -p [part] -e
-index.ts run -d [day] -p [part] -e [ex]
-index.ts run -l
-index.ts run -l -e
-index.ts run -l -e [ex]
+pnpm start
+pnpm start -e
+pnpm start -d [day]
+pnpm start -d [day] -e
+pnpm start -d [day] -p [part]
+pnpm start -d [day] -p [part] -e
+pnpm start -d [day] -p [part] -e [ex]
 
 Options:
   -d, --day      Run a day in the advent of code.
-                               [number] [choices: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+   [number] [choices: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,
+                                                 18, 19, 20, 21, 22, 23, 24, 25]
   -p, --part     Run part 1 or part 2 of a day.         [number] [choices: 1, 2]
-  -l, --latest   Run latest day.
-  -e, --example  Run example input (usually 1 or 2) rather than real input for
-                 the given part/day.                                    [number]
+  -e, --example  Run example input (usually 1 or 2) rather than real input for t
+                 he given part/day.                                     [number]
       --help     Show help                                             [boolean]
 ```

@@ -14,6 +14,6 @@ export const parseArgs = async (args: string[]) =>
     })
     .version(false)
     .help()
-    .usage('$0 -d [day]')
+    .usage('pnpm commit -d [day]')
     .showHelpOnFail(true, "This can't be run with these options.")
     .parse();

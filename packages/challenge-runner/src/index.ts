@@ -1,6 +1,6 @@
 import { DayNumber, ERROR_MESSAGE, PartNumber } from '@cheemcheem/adventofcode-common';
 import { days } from '@cheemcheem/adventofcode-challenge';
-import { parseArgs } from './commandline/argParser';
+import { parseArgs } from './argParser';
 
 const main = async (args?: string[]) => {
   if (!args) return;

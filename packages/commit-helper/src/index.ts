@@ -1,6 +1,6 @@
 
 import { execSync } from 'child_process';
-import { parseArgs } from './commandline/argParser';
+import { parseArgs } from './argParser';
 
 const main = async (args?: string[]) => {
   if (!args) return;
