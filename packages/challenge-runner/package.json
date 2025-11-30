@@ -6,11 +6,11 @@
     "start": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js --log-level=error && node dist/index.js"
   },
   "devDependencies": {
+    "@cheemcheem/adventofcode-type-config": "workspace:*",
     "@types/yargs": "^17.0.33",
-    "esbuild": "^0.24.0",
+    "esbuild": "^0.27.0",
     "typescript": "^5.7.2",
-    "yargs": "^17.7.2",
-    "@cheemcheem/adventofcode-type-config": "workspace:*"
+    "yargs": "^17.7.2"
   },
   "dependencies": {
     "@cheemcheem/adventofcode-challenge": "workspace:*",
