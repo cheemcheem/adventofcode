@@ -1,5 +1,6 @@
 {
   "name": "@cheemcheem/adventofcode-challenge-runner",
+  "license": "MIT",
   "version": "1.0.0",
   "private": false,
   "scripts": {
@@ -16,6 +17,5 @@
     "@cheemcheem/adventofcode-challenge": "workspace:*",
     "@cheemcheem/adventofcode-common": "workspace:*"
   },
-  "author": "Kathan Cheema",
-  "license": "GPL-3.0-only"
+  "author": "Kathan Cheema"
 }

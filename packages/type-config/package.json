@@ -1,5 +1,6 @@
 {
   "name": "@cheemcheem/adventofcode-type-config",
+  "license": "MIT",
   "version": "1.0.0",
   "private": true,
   "exports": {
@@ -11,6 +12,5 @@
   "peerDependencies": {
     "typescript": "^5.7.2"
   },
-  "author": "Kathan Cheema",
-  "license": "GPL-3.0-only"
+  "author": "Kathan Cheema"
 }

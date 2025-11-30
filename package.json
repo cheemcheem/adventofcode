@@ -1,5 +1,6 @@
 {
   "name": "@cheemcheem/adventofcode",
+  "license": "MIT",
   "version": "1.0.0",
   "private": true,
   "engines": {
@@ -28,6 +29,5 @@
     "*.{js,jsx,mjs,ts,tsx,mts}": [
       "eslint --fix"
     ]
-  },
-  "license": "GPL-3.0-only"
+  }
 }

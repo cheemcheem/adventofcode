@@ -1,5 +1,6 @@
 {
   "name": "@cheemcheem/adventofcode-common",
+  "license": "MIT",
   "version": "1.0.0",
   "private": true,
   "main": "index.ts",
@@ -14,6 +15,5 @@
     "typescript": "^5.7.2",
     "yargs": "^17.7.2"
   },
-  "author": "Kathan Cheema",
-  "license": "GPL-3.0-only"
+  "author": "Kathan Cheema"
 }

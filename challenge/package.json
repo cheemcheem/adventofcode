@@ -1,5 +1,6 @@
 {
   "name": "@cheemcheem/adventofcode-challenge",
+  "license": "MIT",
   "version": "1.0.0",
   "private": true,
   "main": "index.ts",
@@ -13,6 +14,5 @@
   "dependencies": {
     "@cheemcheem/adventofcode-common": "workspace:*"
   },
-  "author": "Kathan Cheema",
-  "license": "GPL-3.0-only"
+  "author": "Kathan Cheema"
 }
