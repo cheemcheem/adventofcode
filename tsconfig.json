@@ -1,7 +1,7 @@
 {
     "extends": "@cheemcheem/adventofcode-config-types",
-    "include": ["./**/*"],
+    "include": ["*.ts", "*.mts"],
     "compilerOptions": {
-        "outDir": "lib"
+      "noEmit": true
     }
 }

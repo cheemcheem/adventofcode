@@ -29,7 +29,7 @@ export const runAll = async (hasExample?: boolean | 1 | 2) => {
     const solutions1 = await getSolutions(1);
     const solutions2 = await getSolutions(2);
 
-    if (solutions1.length !== solutions2.length) throw ERROR_MESSAGE;
+    if (solutions1.length !== solutions2.length) throw new Error(ERROR_MESSAGE);
 
     solutions = [];
     for (let i = 0; i < solutions1.length; i++) {

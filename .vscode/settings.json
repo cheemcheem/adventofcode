@@ -1,5 +1,5 @@
 {
-  "typescript.tsdk": "packages/type-config/node_modules/typescript/lib",
+  "typescript.tsdk": "packages/config-types/node_modules/typescript/lib",
   "peacock.color": "#1C402F",
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#2c6349",

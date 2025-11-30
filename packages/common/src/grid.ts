@@ -1,6 +1,6 @@
 export type Grid<T> = T[][];
-export type Position = { rowIndex: number; colIndex: number };
-export type GridVector<Limit = number> = { rowIncrement: Limit; colIncrement: Limit };
+export interface Position { rowIndex: number; colIndex: number }
+export interface GridVector<Limit = number> { rowIncrement: Limit; colIncrement: Limit }
 
 /* --------- POSITIONS --------- */
 
@@ -78,7 +78,7 @@ export const getValue = <T>(grid: Readonly<Grid<T>>, position: Position) => {
 };
 
 type FindNearbyMatchParams<T> = {
-  searchItems?: Readonly<T[]>;
+  searchItems?: readonly T[];
   grid: Readonly<Grid<T>>;
 } & Position & GridVector<-1 | 0 | 1>;
 const findNearbyMatch = <T>({ colIncrement, colIndex, rowIncrement, rowIndex, searchItems, grid }: FindNearbyMatchParams<T>) => {
@@ -89,12 +89,12 @@ const findNearbyMatch = <T>({ colIncrement, colIndex, rowIncrement, rowIndex, se
   return undefined;
 };
 
-type SearchNearbyParams<T> = {
+interface SearchNearbyParams<T> {
   grid: Readonly<Grid<T>>;
   diagonal?: boolean;
   position: Position;
-  searchItems?: Readonly<T[]>;
-};
+  searchItems?: readonly T[];
+}
 export const searchNearby = <T>({ grid, diagonal, position: { rowIndex, colIndex }, searchItems }: SearchNearbyParams<T>) => {
   const positions: (Position | undefined)[] = [];
 
@@ -132,7 +132,7 @@ export const copyGrid = <T>(grid: Readonly<Grid<T>>) => {
   return [...grid].map(gridRow => [...gridRow]);
 };
 
-export const searchGrid = <T>(grid: Readonly<Grid<T>>, ...searchItems: Readonly<T[]>) => {
+export const searchGrid = <T>(grid: Readonly<Grid<T>>, ...searchItems: readonly T[]) => {
   const positions: Position[] = [];
   for (let rowIndex = 0; rowIndex < grid.length; rowIndex++) {
     const row = grid[rowIndex];
@@ -150,7 +150,7 @@ export const MIN_POSITION = { rowIndex: 0, colIndex: 0 } as const satisfies Posi
 
 export const ALL_DIGITS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'] as const;
 
-export const inputAsGrid = <T = string>(input: string[], allowedValues?: Readonly<T[]>): Grid<T> => {
+export const inputAsGrid = <T = string>(input: string[], allowedValues?: readonly T[]): Grid<T> => {
   const mapped = input.map(row => row.split(''));
 
   if (allowedValues && mapped.flatMap(row => row).find(value => !allowedValues.includes(value as T))) {

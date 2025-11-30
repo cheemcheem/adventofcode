@@ -1,4 +1,4 @@
 {
-    "extends": "@cheemcheem/adventofcode-type-config",
+    "extends": "@cheemcheem/adventofcode-config-types",
     "include": ["src/**/*"]
 }

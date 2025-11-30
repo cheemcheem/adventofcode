@@ -5,7 +5,7 @@
   "private": true,
   "main": "index.ts",
   "devDependencies": {
-    "@cheemcheem/adventofcode-type-config": "workspace:*",
+    "@cheemcheem/adventofcode-config-types": "workspace:*",
     "@types/yargs": "^17.0.33",
     "esbuild": "^0.27.0",
     "typescript": "^5.7.2",

@@ -4,7 +4,7 @@ import { runOne, runAll } from './challenge-runner.js';
 
 const main = async () => {
   const result = await parseArgs(process.argv);
-  const day = result.day as DayNumber;
+  const day = result.day as DayNumber | undefined;
   const part = result.part as PartNumber | undefined;
   const example = result.example as PartNumber | undefined;
 
